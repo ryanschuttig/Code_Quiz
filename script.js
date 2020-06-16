@@ -27,9 +27,9 @@ var questionText = document.createElement("p");
 
 // Declare globals
 // Variable to store timer
-var timer = 75;
+var timer = 60;
 // Variable to store current index
-var index = 0;
+var i = 0;
 
 // Functions
 // Function that loads content when page loads
@@ -57,7 +57,7 @@ function showTimer() {
         if (timer === 0) {
             clearInterval(timeInterval)
         }
-    }, 5 * 1000)
+    }, 1000)
 }
 
 function nextQuestion() {
@@ -79,13 +79,13 @@ function nextQuestion() {
 
     for (let i = 0; i < currentQuestion.choices.length; i++) {
         var answerBtn = document.createElement("button");
-        answerBtn.classList.add("chaoiceBtn");
+        answerBtn.classList.add("choiceBtn");
         answerBtn.textContent = currentQuestion.choices[i];
         answersDiv.appendChild(answerBtn);
     }
 // Append div element to container
     containerEl.appendChild(answersDiv);
-};
+}
 
 function checkAnswer(event) {
     
@@ -108,8 +108,8 @@ function checkAnswer(event) {
 // Function that handles display next question
 // Function that checks answer and displays following question
 
-startBtn.addEventListener("click", startQuiz());
+startBtn.addEventListener("click", startQuiz);
 // Add event listener for choice button
-document.addEventListener("click", checkAnswer());
+document.addEventListener("click", checkAnswer);
 // Call function to show opening page
-openingPage() 
+openingPage();
