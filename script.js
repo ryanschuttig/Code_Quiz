@@ -40,12 +40,12 @@ var startBtn = document.createElement("button");
 // Create <p> tag to display question
 var questionText = document.createElement("p");
 
-// Declare globals
+// GLOBALS
 // Variable to store timer
 var timer = 60;
 // Variable to store current index
-var i = 0;
-
+var index = 0;
+// Creates horizontal line between question and answer result
 var hr = document.createElement("hr");
 document.body.appendChild(hr);
 
@@ -83,7 +83,7 @@ function showTimer() {
 // Function that handles display next question
 function nextQuestion() {
     // Declare variable to store current question
-    var currentQuestion = questions[i];
+    var currentQuestion = questions[index];
     // Empty container
     containerEl.textContent = "";
     // Add current question title to display
@@ -98,7 +98,7 @@ function nextQuestion() {
 
         // Create button for each choice
         var answerBtn = document.createElement("button");
-        
+
         // Add class to each button for event listener
         answerBtn.classList.add("choiceBtn");
         // Add text to each button
@@ -117,21 +117,11 @@ function checkAnswer(event) {
     if (event.target.matches(".choiceBtn")) {
         // Logic to check for answer
 
-        i++;
-
-
-
-
+        index++;
 
         nextQuestion()
 
-
     }
-
-
-
-
-
 }
 
 startBtn.addEventListener("click", startQuiz);

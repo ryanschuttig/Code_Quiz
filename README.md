@@ -1,21 +1,15 @@
 # Code_Quiz
 
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
+Welcome to Code Quiz!
+This does not work as expected at this point in time.
 
-✓ The first view of the application displays a button used to start the quiz.
-✓ Clicking the 'Start Quiz' button displays a series of questions.
-✓ Once the quiz begins, a countdown timer starts.
-✓ If a question is answered incorrectly, additional time is subtracted from the timer.
-✓ The timer ends when all questions have been answered or the timer reaches 0.
-✓ After the game ends, the user can save their initials and score to a highscores view using local storage.
-✓ Repository contains quality README with description, screenshot, link to deployed application.
+Created container for page.
+Declared variables for timer display and current index.
+Used dynamic elements to create heading, button to start quiz, and p tag to display questions.
+
+Declared function for opening page and appended main container.
+Function for start quiz to show timer and questions.
+showTimer function to display timer countdown when quiz begins.
+Added questions to loop and answer buttons to correct choice.
+
+Event listeners to startBtn to begin quiz and to checkAnswer to see if answer is correct or incorrect.
