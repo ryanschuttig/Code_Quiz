@@ -1,7 +1,6 @@
 # Code_Quiz
 
 Welcome to Code Quiz!
-This does not work as expected at this point in time.
 
 Created container for page.
 Declared variables for timer display and current index.
